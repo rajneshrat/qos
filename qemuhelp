@@ -1,0 +1,3 @@
+getfacl /root/
+setfacl -m u:libvirt-qemu:r-x /root
+sudo virt-install --accelerate --hvm --connect qemu:///system --cdrom ubuntu.iso --name ubuntu --ram 2048 --disk path=disk.img,size=3 --vnc
